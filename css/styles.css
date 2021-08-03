@@ -147,6 +147,7 @@
   color: var(--gray);
   text-shadow: var(--shadow) var(--color_shadow);
   margin: 15px 0;
+  margin-right: 2rem;
 }
 
 .copy__active {
@@ -188,6 +189,16 @@
 #formulario-staff {
   display: flex;
   flex-direction: column;
+}
+
+#discosUsuario{
+  padding: 0.3rem;
+  width: 12rem;
+  border-radius: 8px;
+}
+
+.eliminar{
+  display: none;
 }
 
 /* TOTAL*/

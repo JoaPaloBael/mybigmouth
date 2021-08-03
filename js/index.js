@@ -8,8 +8,8 @@ document.querySelector('#enterateBoton').onclick = function () {
     //2. Insertar dentro de formPadre: h2 + input number + input submit.
     formPadre.innerHTML =
         `<h2>¿Cuántos discos de Oasis tenés?</h2>
-        <input type="number" required="true" min="0" max="48" id="discosUsuario">
-        <input type="submit" value="OK">`
+        <div class="inputFormDiscos"><input type="number" required="true" min="0" max="48" id="discosUsuario">
+        <input type="submit" value="OK" class="cta"></div>`
     divForm.appendChild(formPadre);
     //3. Capturar dato del input dentro del evento onsubmit
     divForm.onsubmit = (event) => {
@@ -27,16 +27,23 @@ document.querySelector('#enterateBoton').onclick = function () {
         //5. Bucle IF para mostar resultado en pantalla y cambiar el texto.
         function mostrarResultado() {
             if (discosUsuarioAsNumber === 0) {
-                document.getElementById("cambiar").innerHTML =("En serio no tenés ninguno?");
+                document.getElementById("cambiar").innerHTML =("En serio no tenés ninguno? <br><span class='blanco'>Pasate por nuestra tienda!</span>");
             } else if (coleccionCompleta() > 0 && coleccionCompleta() < 48) {
                 document.getElementById("cambiar").innerHTML = (`<span class='blanco'>Te faltan ${coleccionCompleta()} discos</span> para completar la colección. <span class='blanco'>Pasate por nuestra tienda y descubrí cuales son!</span>`);
             } else {
                 document.getElementById("cambiar").innerHTML = ("Buenísimo, los tenes todos! Pasa por nuestra tienda a ver el merchandising!");
             }
         }
+        //6. Función que elimine el form
+        function eliminarForm (){
+            const inputDiscos = document.querySelector('#insertarForm');
+            inputDiscos.classList.add("eliminar");
+        } //Segunda pequeña victoria!
+        eliminarForm();
         mostrarResultado();
     }
 }
+
 
 //------------------------------------------------------------ Formulario Staff
 const KEY_STORAGE = 'staffData';
