@@ -1,7 +1,9 @@
 //------------------------------------------------------------¿Cuántos discos de Oasis te faltan?
+//--Variable Global
+const btnEnterate = document.querySelector('#enterateBoton');
 
 //1. Capturar el click de "Enterate Acá" + agregar formulario
-document.querySelector('#enterateBoton').onclick = function () {
+btnEnterate.onclick = function () {
     //---Variables locales
     let divForm = document.querySelector('#insertarForm');
     let formPadre = document.createElement("form");
@@ -11,6 +13,7 @@ document.querySelector('#enterateBoton').onclick = function () {
         <div class="inputFormDiscos"><input type="number" required="true" min="0" max="48" id="discosUsuario">
         <input type="submit" value="OK" class="cta"></div>`
     divForm.appendChild(formPadre);
+
     //3. Capturar dato del input dentro del evento onsubmit
     divForm.onsubmit = (event) => {
         event.preventDefault();
@@ -21,9 +24,8 @@ document.querySelector('#enterateBoton').onclick = function () {
         console.log(discosUsuarioAsNumber); //yassssss (pequeña victoria);
 
         //4. Arrow function que reste totalDiscos - la cantidad de discos del usuario
-        const coleccionCompleta = () => {
-            return (totalDiscos - discosUsuarioAsNumber);
-        };
+        const coleccionCompleta = () => { return (totalDiscos - discosUsuarioAsNumber);};
+
         //5. Bucle IF para mostar resultado en pantalla y cambiar el texto.
         function mostrarResultado() {
             if (discosUsuarioAsNumber === 0) {
@@ -38,7 +40,9 @@ document.querySelector('#enterateBoton').onclick = function () {
         function eliminarForm (){
             const inputDiscos = document.querySelector('#insertarForm');
             inputDiscos.classList.add("eliminar");
+            btnEnterate.innerHTML = "<a href='tienda.html' class='enterateHref'>Ir a la tienda</a>"
         } //Segunda pequeña victoria!
+
         eliminarForm();
         mostrarResultado();
     }

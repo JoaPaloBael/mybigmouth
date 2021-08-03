@@ -1,16 +1,25 @@
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
-addToShoppingCartButtons.forEach((addToCartButton) => {
-  addToCartButton.addEventListener('click', addToCartClicked);
+//Carrito de compras
+
+//1. Obtener referencia del DOM
+//botón de añadir al carrito
+const sumarAlCarritoBtn = document.querySelectorAll('.sumarAlCarro');
+//Botón de comprar
+const comprarBtn = document.querySelector('.comprarButton');
+
+//2. Capturar interacción del usuario
+//forEach para colocar evento onclick
+sumarAlCarritoBtn.forEach((obj) => {
+  obj.addEventListener('click', btnCarritoClickeado);
 });
 
-const comprarButton = document.querySelector('.comprarButton');
-comprarButton.addEventListener('click', comprarButtonClicked);
+// 3. Reaccionar a la interacción del usuario
+comprarBtn.addEventListener('click', comprarBtnClickeado);
 
 const shoppingCartItemsContainer = document.querySelector(
   '.shoppingCartItemsContainer'
 );
 
-function addToCartClicked(event) {
+function btnCarritoClickeado(event) {
   const button = event.target;
   const item = button.closest('.item');
 
@@ -112,7 +121,7 @@ function quantityChanged(event) {
   updateShoppingCartTotal();
 }
 
-function comprarButtonClicked() {
+function comprarBtnClickeado() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
 }

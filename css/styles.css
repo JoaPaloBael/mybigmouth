@@ -201,6 +201,13 @@
   display: none;
 }
 
+.enterateHref{
+  color: black;
+  font-weight: bolder;
+  text-decoration: none;
+
+}
+
 /* TOTAL*/
 .total {
   display: flex;
