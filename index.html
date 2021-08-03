@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OASIS FAN'S PAGE</title>
+    <!-- Box icons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="hero">
+        <nav class="nav__hero">
+            <div class="container nav__container">
+                <div class="logo">
+                    <h2 class="logo__name">oasis</h2>
+                </div>
+                <div class="links">
+                    <a href="#" class="link">Home</a>
+                    <a href="blog.html" class="link">Blog</a>
+                    <a href="tienda.html" class="link link--active">Tienda</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCION PRINCIPAL -->
+    <main class="main__index">
+        <!-- Discografía completa? -->
+        <section class="container hero__main">
+            <div class="hero__textos">
+                <h1 class="title">La mejor <span class="title--active">música de los 90's.</span></h1>
+                <p class="copy">Realmente eres fan de
+                    <span class="logo__name--modifier">oasis </span>?
+                    <br>
+                    <span class="copy__active" id="cambiar">Tenés la discografía completa?</span>
+
+                </p>
+                <button class="cta" id="enterateBoton">¡Enterate acá!</button>
+                <div id="insertarForm"></div>
+            </div>
+            <img src="resourses/mockup.jpg" class="mockup">
+        </section>
+        <!-- Formar parte del Staff -->
+        <section class="email container container--modifier">
+            <h2 class="subtitle subtitle--modifier" id="parrafoPrueba">Te gustaría formar parte del staff <span
+                    class="point">?</span></h2>
+
+            <p class="copy__section copy__section--modifier">Somos un grupo de fans apasionados por Oasis.
+                Buscamos una persona que sepa inglés avanzado
+                y se comprometa con los plazos de entrega. <br>Esa persona sos vos?
+            </p>
+
+            <div class="check">
+                <div class="check__item">
+                    <i class="bx bx-check"></i>
+                    <div class="check__numbers">
+                        <p class="check__number">+75</p>
+                        <p class="check__copy">Letras interpretadas.</p>
+                    </div>
+                </div>
+                <div class="check__item">
+                    <i class="bx bx-check"></i>
+                    <div class="check__numbers">
+                        <p class="check__number">+48</p>
+                        <p class="check__copy">Discos online.</p>
+                    </div>
+                </div>
+                <div class="check__item">
+                    <i class="bx bx-check"></i>
+                    <div class="check__numbers">
+                        <p class="check__number">20</p>
+                        <p class="check__copy">Entradas de blog.</p>
+                    </div>
+                </div>
+            </div>
+
+            <fieldset>
+                <form action="#" method="GET" id="formulario-staff">
+                    <h4 class="copy__section copy__section--modifier">¡Sumate ahora!</h4>
+                    <input class="newsletter__input" id="scriptBox" type="text" name="titulo" placeholder="Ingrese email" onkeypress="capturarEnter(event)">
+                    <button class="boton cta" type="submit">Enviar</button>
+                </form>
+                <ul class="list__staff" id="staff-contenedor">
+                    <li>Noel Gallagher</li>
+                    <li>Liam Gallagher</li>
+                    <li>Gem Archer</li>
+                </ul>
+            </fieldset>
+
+        </section>
+    </main>
+
+    <!-- Boton de ir arriba -->
+    <div class="go-top-container">
+        <div class="go-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Johanna Palo Bael &copy;</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/scripts_index.js"></script>
+    <script src="js/scripts_comunes.js"></script>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</body>
+
+</html>
