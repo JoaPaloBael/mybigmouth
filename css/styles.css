@@ -5,8 +5,8 @@
   --gold2: #F6CD8F;
   --gray: #ffffff80;
   --gray2: #f7d9d990;
-  --black1: #1A1B1F;
-  --black2: #30353B;
+  --black1: #212222;
+  --black2: #42474d;
   --shadow: 0 8px 8px;
   --color_shadow: #00000033;
 }
@@ -82,6 +82,12 @@
   font-family: helvetica;
   font-size: 60px;
   font-style: oblique;
+  font-weight: bolder;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
 }
 
 .logo__name--modifier {
@@ -217,8 +223,8 @@
 }
 
 /* services */
-.services {
-  background: #fafafa;
+.main__tienda {
+  background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
 }
 
 .subtitle {
@@ -735,7 +741,7 @@ i {
 }
 
 /*TIENDA*/
-.item {
+.disco {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -751,7 +757,7 @@ i {
   box-shadow: 0 0 6px var(--color_shadow);
 }
 
-.item-title {
+.tituloDisco {
   text-align: center;
   font-size: 26px;
   color: #fff;
@@ -759,7 +765,7 @@ i {
   padding: 15px;
 }
 
-.item-image {
+.imagenDisco {
   display: flex;
   margin: 0 auto;
   max-width: 15rem;
@@ -774,7 +780,7 @@ i {
   margin: 0px 15px;
 }
 
-.item-details>.item-price {
+.item-details>.precioDisco {
   font-size: 1.5rem;
   color: var(--gold1);
   margin: 0 auto;
