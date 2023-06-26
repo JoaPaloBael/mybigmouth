@@ -78,11 +78,13 @@
   padding: 0;
 }
 
-.logo__name {
+.logo__name a{
   font-family: helvetica;
   font-size: 60px;
   font-style: oblique;
   font-weight: bolder;
+  color: white;
+  text-decoration: none;
 }
 a:hover{
   text-decoration: none;
@@ -299,6 +301,7 @@ a:hover{
 .card__copy {
   color: var(--gray2);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .card__button {
@@ -453,6 +456,7 @@ a:hover{
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 30px auto;
+  text-align: center;
 }
 
 .check__item {
@@ -460,6 +464,7 @@ a:hover{
   padding-right: 10px;
   display: flex;
   border-right: 2px solid var(--black2);
+  justify-content: center;
 }
 
 .bx-check {
